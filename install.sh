@@ -4,7 +4,7 @@ helm repo update
 helm install \
     cilium \
     cilium/cilium \
-    --version 1.14.5 \
+    --version 1.14.6 \
     --namespace kube-system \
     --set ipam.mode=kubernetes \
     --set=kubeProxyReplacement=true \
@@ -15,4 +15,6 @@ helm install \
     --set=k8sServiceHost=localhost \
     --set=k8sServicePort=7445 \
     --set=operator.replicas=1 \
-    --set=bgpControlPlane.enabled=true
+    --set=bgpControlPlane.enabled=true \
+    --set=ingressController.enabled=true \
+    --set=ingressController.loadbalancerMode=dedicated
