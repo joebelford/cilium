@@ -1,0 +1,18 @@
+apiVersion: cilium.io/v2
+kind: CiliumBGPClusterConfig
+metadata:
+  name: cilium-bgp
+spec:
+  nodeSelector:
+    matchLabels:
+      kubernetes.io/hostname: proliant
+  bgpInstances:
+  - name: "instance-65110"
+    localASN: 65110
+    localPort: 179
+    peers:
+    - name: "peer-65001-udr7"
+      peerASN: 65001
+      peerAddress: 10.0.1.1
+      peerConfigRef:
+        name: "cilium-peer"
