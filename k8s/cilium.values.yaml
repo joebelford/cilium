@@ -39,3 +39,4 @@ ingressController:
   # loadbalancerMode: dedicated
   default: false
   enabled: false
+# routingMode: native

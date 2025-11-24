@@ -2,13 +2,14 @@ apiVersion: cilium.io/v2
 kind: CiliumBGPClusterConfig
 metadata:
   name: cilium-bgp
+  namespace: kube-system
 spec:
   nodeSelector:
     matchLabels:
       kubernetes.io/hostname: proliant
   bgpInstances:
-  - name: "instance-65110"
-    localASN: 65110
+  - name: "instance-65010"
+    localASN: 65010
     localPort: 179
     peers:
     - name: "peer-65001-udr7"

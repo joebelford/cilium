@@ -3,6 +3,7 @@ apiVersion: cilium.io/v2
 kind: CiliumLoadBalancerIPPool
 metadata:
   name: cilium-ingress
+  namespace: kube-system
 spec:
   allowFirstLastIPs: "No"
   blocks:
