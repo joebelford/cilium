@@ -17,7 +17,7 @@ securityContext:
     - CHOWN
     - KILL
     - NET_ADMIN
-    - NET_BIND_SERVICE
+    - NET_BIND_SERVICE # Needed for BGP
     - NET_RAW
     - IPC_LOCK
     - SYS_MODULE

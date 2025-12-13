@@ -12,7 +12,7 @@ k8sServiceHost: localhost
 k8sServicePort: 7445 #kubeprism port
 kubeProxyReplacement: true
 securityContext:
-  capabilities:
+  capabilities: # Talos can't load modules need to drop SYS_MODULE from defaults
     ciliumAgent:
     - CHOWN
     - KILL
