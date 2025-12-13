@@ -6,7 +6,7 @@
 kubectl apply -k 'https://github.com/kubernetes-sigs/gateway-api//config/crd?ref=v1.4.0'
 ```
 
-**NOTE** Use helm chart and [values](./cilium.values.yaml) file instead.
+**NOTE** Use helm chart and [values](./cilium.values.yaml), or [talos](./talos.values.yaml) file instead.
 
 ```bash
 helm repo add cilium https://helm.cilium.io/
